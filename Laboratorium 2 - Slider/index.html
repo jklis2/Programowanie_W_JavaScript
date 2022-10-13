@@ -4,20 +4,35 @@
         <meta charset="UTF-8">
         <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
-        <title>Lab1</title>
+        <title>Lab2</title>
         <link rel="stylesheet" href="style.css">
     </head>
+    <header><i> Photo Slider </i></header>
     <body>
         <div id="slider">
             <div class="slides">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="./Photos/Photo1.JPG" alt="Photo1">
+                <img src="./Photos/Photo2.JPG" alt="Photo2">
+                <img src="./Photos/Photo3.JPG" alt="Photo3">
+                <img src="./Photos/Photo4.JPG" alt="Photo4">
+                <img src="./Photos/Photo5.JPG" alt="Photo5">
             </div>
+            
         </div>
+
+        <div id="buttons">
+            <a class="Poprzednie" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="Następne" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
         <main>
         </main>
         <script src="main.js"></script>

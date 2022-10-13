@@ -1,0 +1,65 @@
+body{
+    background-color: wheat;
+}
+
+header{
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#slider {
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #bbb;
+    margin: 100px auto 0 auto;
+    overflow: hidden;
+}
+
+#slider .slides {
+    display: flex;
+    animation-name: pociag-w-lewo;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.Poprzednie, .Następne {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.Dalej {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Wstecz:hover, .Dalej:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin:20px 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
