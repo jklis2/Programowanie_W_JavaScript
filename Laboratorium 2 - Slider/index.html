@@ -7,23 +7,37 @@
         <title>Lab2</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <header><i> Photo Slider </i></header>
+
+    <header>
+        <i> Photo Slider </i>
+    </header>
+
     <body>
         <div id="slider">
             <div class="slides">
                 <img src="./Photos/Photo1.JPG" alt="Photo1">
+            </div>
+            <div class="slides">
                 <img src="./Photos/Photo2.JPG" alt="Photo2">
+            </div>
+            <div class="slides">
                 <img src="./Photos/Photo3.JPG" alt="Photo3">
+            </div>
+            <div class="slides">
                 <img src="./Photos/Photo4.JPG" alt="Photo4">
+            </div>
+            <div class="slides">
                 <img src="./Photos/Photo5.JPG" alt="Photo5">
             </div>
-            
+            <span id="first">
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+            </span>
+            <span id="second">
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </span>
         </div>
 
-        <div id="buttons">
-            <a class="Poprzednie" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="Następne" onclick="plusSlides(1)">&#10095;</a>
-        </div>
+        
 
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -35,6 +49,7 @@
 
         <main>
         </main>
+
         <script src="main.js"></script>
     </body>
 </html>
