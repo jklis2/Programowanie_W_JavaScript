@@ -1,5 +1,8 @@
 let slideIndex = 1;
-showSlides(slideIndex);
+
+// showSlides(slideIndex);
+
+let moveRightInterval = window.setInterval((function(){plusSlides(1)}), 5000)
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -10,6 +13,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  clearInterval(moveRightInterval);
+  moveRightInterval = window.setInterval((function(){plusSlides(1)}), 5000)
   let i;
   let slides = document.getElementsByClassName("slides");
   let dots = document.getElementsByClassName("dot");
