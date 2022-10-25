@@ -1,0 +1,76 @@
+header{
+    text-align: center;
+}
+
+.soundSources{
+    visibility: hidden;
+    height: 0;
+}
+
+.soundSchema{
+    display: flex;
+}
+
+.soundSchemaElement{
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+.breakLine{
+    padding: 10px;
+    border-bottom-style: solid;
+
+}
+
+.buttonIsRecording:after{
+    content: "Stop";
+}
+
+.buttonIsNotRecording:after{
+    content: 'Start';
+}
+
+/* Recording Section */
+
+#egzampleHiddenRecord{
+    visibility: hidden;
+    height: 0;
+}
+
+.recordsContainer{
+    margin: 20px;
+}
+
+.recordContainer{
+    margin-top: 10px;
+    background-color: rgb(207, 207, 207);
+    height: 60px;
+}
+
+.recordContainerButtonsContainer{
+    width: 100px;
+    height: 100%;
+    border-right-style: solid;
+    display: flex;
+}
+
+.deleteRecordButton{
+    background-color: red;
+    height: 10;
+    width: 10;
+}
+
+.deleteRecordButton:hover{
+    background-color: rgb(116, 3, 3);
+}
+
+.playRecordButton{
+    background-color: green;
+    height: 10;
+    width: 10;
+}
+
+.playRecordButton:hover{
+    background-color: rgb(2, 94, 2);
+}
