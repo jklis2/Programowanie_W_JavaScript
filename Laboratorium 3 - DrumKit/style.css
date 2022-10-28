@@ -1,5 +1,14 @@
+body{
+    background: rgb(235,238,174);
+    background: linear-gradient(124deg, rgba(235,238,174,1) 0%, rgba(146,199,117,1) 100%);
+    height: 94vh;
+}
+
 header{
     text-align: center;
+    font-size: 25px;
+    font-family: Apple Chancery, cursive;
+    margin-bottom: -30px;
 }
 
 .soundSources{
@@ -14,6 +23,7 @@ header{
 .soundSchemaElement{
     padding-right: 20px;
     padding-left: 20px;
+    font-size: 20px;
 
 }
 
@@ -23,12 +33,40 @@ header{
 
 }
 
+.buttonIsRecording{
+    font-size: 20px;
+    color: red;
+    border-radius: 18px;
+    background-color: #ffebb8;
+    padding: 5px;
+}
+
+.buttonIsNotRecording{
+    font-size: 20px;
+    color: green;
+    border-radius: 18px;
+    background-color: #ffebb8;
+    padding: 5px;
+}
+
 .buttonIsRecording:after{
     content: "Stop";
+    color: red;
+    font-size: 20px;
 }
 
 .buttonIsNotRecording:after{
     content: 'Start';
+    color: green;
+    font-size: 20px;
+}
+
+.playSelectedButton{
+    font-size: 20px;
+    color: green;
+    border-radius: 18px;
+    background-color: #fde7b5;
+    padding: 5px;
 }
 
 /* Recording Section */
@@ -44,21 +82,23 @@ header{
 
 .recordContainer{
     margin-top: 10px;
-    background-color: rgb(207, 207, 207);
+    background-color: #dee099;
     height: 60px;
+    border-radius: 25px;
 }
 
 .recordContainerButtonsContainer{
     width: 100px;
     height: 100%;
-    border-right-style: solid;
     display: flex;
 }
 
 .deleteRecordButton{
     background-color: red;
-    height: 10;
-    width: 10;
+    height: 100%;
+    width: 50%;
+    margin-right: 10px;
+    margin-left: 30px;
 }
 
 .deleteRecordButton:hover{
@@ -67,8 +107,10 @@ header{
 
 .playRecordButton{
     background-color: green;
-    height: 10;
-    width: 10;
+    height: 100%;
+    width: 50%;
+    margin-right: 10px;
+    
 }
 
 .playRecordButton:hover{
