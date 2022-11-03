@@ -1,0 +1,39 @@
+body, h1, h2, h3, h4, h5, p{
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.headerContainer{
+    position: absolute;
+    display: flex;
+    background-color: #fbdfaa;
+    color: black;
+    width: 100vw;
+    padding: 5px 0px 5px 10px;
+}
+
+.headerButtonsContainer{
+    display: flex;
+    margin-left: 40px;
+}
+
+/* DETAIL NOTE */
+.DetailNoteBG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: rgb(183, 183, 183);
+    opacity: 0.3;
+}
+
+.DetailNoteContainer{
+    width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(208, 230, 131);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>NoteKeep</title>
+</head>
+<body>
+    <div class="headerContainer">
+        <h4 class="Title">NoteKeep</h3>
+            <div class="headerButtonsContainer">
+                <button class="headerButton" id="AddNoteHeaderButton"> Add Note </button>
+            </div>
+    </div>
+    <div class="contentContainer">
+        <div class="NotesContainer">
+            <div class="PinnedNotesContainer">
+
+            </div>
+            <div class="RegularNotesContainer">
+
+            </div>
+        </div>
+        <!-- Visible when we want to add/edit/delete a note -->
+        <div class="DetailNoteBG">
+            <div class="DetailNoteContainer">
+                <div class="DetailNoteTitleAndColor">
+                    <input type="text" id="DetailNoteTitle">
+                    <input type="color" id="colorpicker" value="#0000ff">
+                </div>
+                <div class="DetailNoteContent">
+    
+                </div>
+                <div class="DetailNoteButtonsContainer">
+                    <button class="DetailNoteButton" id="DetailNoteDeleteButton"> Delete </button>
+                    <buttuon class="DetailNoteButton" id="DetailNoteSaveButton"> Save </buttuon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
