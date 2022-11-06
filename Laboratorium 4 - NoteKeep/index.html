@@ -16,10 +16,17 @@
     </div>
     <div class="contentContainer">
         <div class="NotesContainer">
-            <div class="PinnedNotesContainer">
+            <h3>Pinned:</h3>
+            <div id="PinnedNotesContainer" class="NotesGrid breakLine">
+                <div class="note" id="egzampleHiddenNote">
+                    <h3 class="NoteTitle">Title</h3>
+                    <p class="NoteDate">Date</p>
+                    <p class="NoteContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ipsam. </p>
+                </div>
 
             </div>
-            <div class="RegularNotesContainer">
+            <h3>Regular:</h3>
+            <div id="RegularNotesContainer" class="NotesGrid">
 
             </div>
         </div>
@@ -27,15 +34,17 @@
         <div class="DetailNoteBG">
             <div class="DetailNoteContainer">
                 <div class="DetailNoteTitleAndColor">
-                    <input type="text" id="DetailNoteTitle">
+                    <input type="checkbox" id="DetailNotePinned">
+                    <input type="text" placeholder="Title:" id="DetailNoteTitle">
                     <input type="color" id="colorpicker" value="#0000ff">
                 </div>
                 <div class="DetailNoteContent">
-    
+                    <textarea  id="textContent" placeholder="Your note..."></textarea>
                 </div>
                 <div class="DetailNoteButtonsContainer">
+                    <button class="DetailNoteButton" id="DetailNoteCancelButton"> Cancel</button>
                     <button class="DetailNoteButton" id="DetailNoteDeleteButton"> Delete </button>
-                    <buttuon class="DetailNoteButton" id="DetailNoteSaveButton"> Save </buttuon>
+                    <button class="DetailNoteButton" id="DetailNoteSaveButton"> Save</button>
                 </div>
             </div>
         </div>
