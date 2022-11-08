@@ -14,8 +14,18 @@ export class Note {
         return note
     }
 
-    DeleteNote(id){
+    UpdateNote(note){
+        const oldNote = this.GetNote(note.id)
+        note.date = oldNote.date
+        this.DeleteNote(note.id)
+        return this.SaveNote(note)
 
+    }
+
+    DeleteNote(id){
+        const notes = this.GetNotes()
+        const updatedNotes = notes.filter(function(note){return (note.id!=id);})
+        localStorage.setItem("notes", JSON.stringify(updatedNotes))
     }
 
     GetNotes(){
@@ -27,7 +37,8 @@ export class Note {
     }
 
     GetNote(id){
-
+        const notes = this.GetNotes()
+        return notes.filter(function(note){return (note.id==id);})[0]
     }
 
     GetNewId(){

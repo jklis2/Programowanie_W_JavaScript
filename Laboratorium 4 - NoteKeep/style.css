@@ -58,7 +58,6 @@ input[type=text]{
 .DetailNoteContainer{
     width: 300px;
     height: 300px;
-    background-color: #88ABFF;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -139,7 +138,7 @@ input[type=text]{
     gap: 5px;
 }
 .note:hover{
-    background-color: aliceblue;
+    opacity: 0.8;
 }
 
 .NoteDate{
