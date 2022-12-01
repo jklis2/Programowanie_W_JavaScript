@@ -1,0 +1,11 @@
+header{
+    text-align: center;
+    font-size: 18px;
+    font-family: Apple Chancery, cursive;
+    border-bottom-style: solid;
+}
+
+.buttons{
+    padding: 15px;
+    border-bottom-style: solid;
+}
