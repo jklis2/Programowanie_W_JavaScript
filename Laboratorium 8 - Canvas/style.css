@@ -1,3 +1,7 @@
+body{
+    background-color: #f0fffc;
+}
+
 header{
     text-align: center;
     font-size: 18px;
@@ -5,7 +9,17 @@ header{
     border-bottom-style: solid;
 }
 
-.buttons{
+.bar{
     padding: 15px;
     border-bottom-style: solid;
+    display: flex;
+    flex-direction: row;
+}
+
+.input_data{
+    margin-right: 40px;
+}
+
+#canvas{
+    margin: 10px 10px 45px 10px
 }

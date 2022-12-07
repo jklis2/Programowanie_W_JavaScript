@@ -1,0 +1,82 @@
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+let numBalls = Number(document.getElementById("numBalls").value);
+let dist = Number(document.getElementById("dist").value);
+let balls = [];
+
+let startBtn = document.getElementById("startBtn");
+let resetBtn = document.getElementById("resetBtn");
+
+startBtn.addEventListener("click", start);
+resetBtn.addEventListener("click", reset);
+
+function start() {
+  if (balls.length === 0) {
+    for (let i = 0; i < numBalls; i++) {
+      balls.push(
+        new Ball(Math.random() * canvas.width, Math.random() * canvas.height)
+      );
+    }
+  }
+  animate();
+}
+
+function reset() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  balls = [];
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < numBalls; i++) {
+    for (let j = 0; j < numBalls; j++) {
+      if (i !== j && distance(balls[i], balls[j]) < dist) {
+        connect(balls[i], balls[j]);
+      }
+    }
+    balls[i].move();
+    balls[i].draw();
+  }
+  requestAnimationFrame(animate);
+}
+
+function Ball(x, y) {
+  this.x = x;
+  this.y = y;
+  this.radius = 10;
+  this.vx = Math.random() * 3 - 1.5;
+  this.vy = Math.random() * 3 - 1.5;
+  this.color = "#000";
+
+  this.draw = function () {
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+    ctx.fill();
+  };
+  this.move = function () {
+    this.x += this.vx;
+    this.y += this.vy;
+
+    if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+      this.vx = -this.vx;
+    }
+    if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+      this.vy = -this.vy;
+    }
+  };
+}
+
+function distance(b1, b2) {
+  let xDist = b1.x - b2.x;
+  let yDist = b1.y - b2.y;
+  return Math.sqrt(xDist * xDist + yDist * yDist);
+}
+
+function connect(b1, b2) {
+  ctx.beginPath();
+  ctx.strokeStyle = "#000";
+  ctx.moveTo(b1.x, b1.y);
+  ctx.lineTo(b2.x, b2.y);
+  ctx.stroke();
+}

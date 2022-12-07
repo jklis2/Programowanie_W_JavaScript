@@ -8,15 +8,20 @@
   <title> Canvas </title>
 </head>
 <header>
-    <h1> Canvas </h1>
+  <h1> Canvas </h1>
 </header>
 <body>
-    <div class="buttons">
-        <button class="start-button"> Start </button>
-        <button class="reset-button"> Reset </button>
+  <div class="bar">
+    <div class="input_data">
+      Number of balls: <input type="number" id="numBalls" value="10">
+      Distance: <input type="number" id="dist" value="160">
     </div>
-    
+    <div class="buttons">
+      <button id="startBtn">Start</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+  <canvas id="canvas" width="800" height="600"></canvas>
   <script src="index.js"></script>
 </body>
-
 </html>
