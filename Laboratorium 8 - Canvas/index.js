@@ -1,5 +1,3 @@
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
 let numBalls = Number(document.getElementById("numBalls").value);
 let dist = Number(document.getElementById("dist").value);
 let balls = [];
@@ -7,6 +5,16 @@ let balls = [];
 let startBtn = document.getElementById("startBtn");
 let resetBtn = document.getElementById("resetBtn");
 
+const createCanvas = document.createElement ("canvas")
+createCanvas.classList.add("canvas")
+
+createCanvas.setAttribute("width", `${window.innerWidth*0.97}`)
+createCanvas.setAttribute("height", "600")
+
+const body =  document.querySelector("body")
+body.appendChild(createCanvas)
+let canvas = document.querySelector("canvas");
+let ctx = canvas.getContext("2d");
 startBtn.addEventListener("click", start);
 resetBtn.addEventListener("click", reset);
 
