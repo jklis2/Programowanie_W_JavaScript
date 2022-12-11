@@ -1,7 +1,10 @@
 let numBalls = document.querySelector("#numBalls");
 let numBallsvalue 
 
-let dist = Number(document.getElementById("dist").value);
+function GetDist(){
+  return Number(document.getElementById("dist").value);
+}
+
 let balls = [];
 
 let startBtn = document.getElementById("startBtn");
@@ -24,8 +27,9 @@ function start() {
   numBallsvalue = numBalls.value
   if (balls.length === 0) {
     for (let i = 0; i < numBallsvalue; i++) {
+      let radius = random(10, 20)
       balls.push(
-        new Ball(Math.random() * canvas.width, Math.random() * canvas.height)
+        new Ball(random(radius, canvas.width-radius), random(radius, canvas.height-radius), radius)
       );
     }
   }
@@ -41,7 +45,7 @@ function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < numBallsvalue; i++) {
     for (let j = 0; j < numBallsvalue; j++) {
-      if (i !== j && distance(balls[i], balls[j]) < dist) {
+      if (i !== j && distance(balls[i], balls[j]) < GetDist()) {
         connect(balls[i], balls[j]);
       }
     }
@@ -51,10 +55,10 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-function Ball(x, y) {
+function Ball(x, y, radius) {
   this.x = x;
   this.y = y;
-  this.radius = 10;
+  this.radius = radius;
   this.vx = Math.random() * 3 - 1.5;
   this.vy = Math.random() * 3 - 1.5;
   this.color = "#000";
@@ -76,6 +80,12 @@ function Ball(x, y) {
       this.vy = -this.vy;
     }
   };
+}
+
+function random(min, max) {
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+
 }
 
 function distance(b1, b2) {
