@@ -61,8 +61,9 @@ function Ball(x, y, radius) {
   this.radius = radius;
   this.vx = Math.random() * 3 - 1.5;
   this.vy = Math.random() * 3 - 1.5;
-  this.color = "#000";
-
+  
+  this.color = randomColor();
+  
   this.draw = function () {
     ctx.fillStyle = this.color;
     ctx.beginPath();
@@ -80,6 +81,13 @@ function Ball(x, y, radius) {
       this.vy = -this.vy;
     }
   };
+}
+
+function randomColor() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return "#" + r.toString(16) + g.toString(16) + b.toString(16);
 }
 
 function random(min, max) {
