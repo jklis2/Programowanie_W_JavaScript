@@ -1,0 +1,101 @@
+body{
+    background: rgb(171,241,238);
+    background: linear-gradient(292deg, rgba(171,241,238,1) 0%, rgba(135,178,230,1) 100%);
+    font-family: Arial, sans-serif;;
+    font-size: 25px;
+    min-height: 97.7vh;
+}
+
+.main-container {
+    margin-top: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-weather{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    color: #fff;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0, 0.1);
+}
+
+.add-weather h1{
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 100px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0 30px 12px rgba(0,0,0, 0.1);
+}
+
+.add-weather input{
+    background-color: initial;
+    color: white;
+    font-size: 25px;
+    width: 350px;
+    height: 50px;
+    padding-left: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 3px solid#003973;
+    outline: none;
+    text-transform: uppercase;
+}
+
+input::placeholder{
+    font-size: 20px;
+    transform: translateY(0px);
+    color: rgb(253, 253, 255);
+}
+
+.add-weather button{
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 25px;
+    height: 55px;
+    line-height: 25px;
+    outline: none;
+}
+
+.remove{
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: transparent !important;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-left: 450px;
+}
+
+.remove:hover{
+    color: black;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+.newWeatherForecast {background-image: linear-gradient(to right, #003973 0%, #E5E5BE  51%, #003973  100%)}
+
+.newWeatherForecast {
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+.newWeatherForecast:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
